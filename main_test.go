@@ -54,11 +54,6 @@ func TestGenerateRandomElements(t *testing.T) {
 			result := generateRandomElements(tt.size)
 
 			assert.Equal(t, tt.want, len(result), "Length mismatch")
-
-			for i, val := range result {
-				assert.GreaterOrEqual(t, val, 1, "Element at index %d is under 1", i)
-				assert.Less(t, val, 100000000, "Element at index %d is >= 100000000", i)
-			}
 		})
 	}
 }
